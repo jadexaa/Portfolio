@@ -1,0 +1,68 @@
+header {
+ padding: 2rem $gutter;
+ h1 {
+    font-size: 2rem;
+    font-weight: $boldWeight;
+}   
+}
+
+// NAV STUFF
+nav {
+    a {
+        img {
+            display: none;
+        }
+        span {
+            display: block;
+        }
+    } // end a
+} // end nav
+
+
+// MAIN STUFF
+
+section {
+    height: 100vh;
+    background-color: $background;
+    padding: $gutter;
+    h2 { background: 50px;}
+    h3 {
+        margin-top: 50px;
+        margin-bottom: 0;;
+    }
+    grid-template-areas: 
+    "title ."
+    "details  photo"
+    ;
+}
+
+#welcome, #education, #contact, #work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+#about {
+    grid-template-columns: 1fr 1fr;
+    column-gap:$gutter;
+    height: 100vh;
+    h2 {align-self: end;}
+}
+
+
+#work, #education {
+    height: 100vh;
+    .cards {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+    .card {
+        flex-basis: calc(50% - ($gutter/2));
+        } // end 
+    }
+}
+
+#education {height: 100vh;}

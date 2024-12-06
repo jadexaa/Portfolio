@@ -1,0 +1,204 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+    
+}
+
+#headerWrapper {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+header {
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem $gutter;
+    gap: 8px;
+    h1 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: $normalWeight;
+    }
+}
+
+
+// NAV STUFF
+#navWrapper {
+    background-color: $menuColor;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        li {flex: 1;}
+    }
+    li.active a {
+        background-color: darken($menuColor, 10%);
+
+        color: white;
+    } 
+    a {
+        height: 100%;
+        display: block;
+        padding: 0.75rem;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-weight: $boldWeight;
+        &:hover {
+            background-color: lighten($menuColor, 10%);
+            color: black;
+        } 
+        img {
+            width: 25px;
+        }
+        span {
+            display: none;
+        }
+    } // end a
+
+} // end nav
+
+
+// MAIN STUFF
+section {
+    height: 100vh;
+    background-color: $background;
+    padding: $gutter;
+    grid-template-areas: 
+    "title"
+    "details"
+    "photo"
+    ;
+}
+
+#welcome {
+    h1, p, h3 {
+        margin: 0;
+        }
+    }
+
+#about, #education, #work {h2 {margin-top: 50px;}}
+
+#welcome, #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact {
+    h2 {
+        margin: 0;
+    }
+}
+
+#about {
+    display:grid;
+    height: auto;
+    h2 {grid-area: title;}
+    p {grid-area: details;}
+    img {
+        grid-area: photo;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10%;
+        justify-self: center;
+    }
+}
+
+#education {height: auto;}
+
+#work {
+    height: auto;
+}
+
+.card{
+    border: solid 2px $dpink;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+
+    text-align: center;
+    margin: $gutter 0;
+    background-color: orange;
+    h4 {
+        margin:0;
+        padding: .6rem;
+        background-color: $dpink;
+    }
+    p {
+        margin: 0;
+        padding: 10px $gutter;
+    }
+    ul {
+        text-align: left;
+        padding-left: $gutter*2;
+        padding-right: $gutter;
+        
+    }
+}
+
+.icon {
+    img{
+        width:20%;
+        margin: $gutter;
+    }
+}
+
+.photo {
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: $gutter;
+        border-radius: 10%;
+        &:hover {background-color: darken(orange, 5%);}
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    a:hover {
+        background-color: darken($background, 10%);
+        border-radius: 10px;
+    }
+}
+
+// footer stuff start
+#footerWrapper {
+    background-color: $primaryColor;
+}
+
+footer {
+    padding: 0.5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $boldWeight;
+        text-align: center;
+        color: black;
+    }
+}

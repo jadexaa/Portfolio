@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio</title>
+    <meta name="description" content="Jade Xa | Start File With SCSS">
+    <meta name="author" content="Jade Xa">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+   
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    <!-- fav icon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+ 
+
+    
+    
+</head>
+<body>    
+    <div id="navWrapper">
+        <nav>
+            <ul>
+                <li class="active"><a href="#welcome"><img src="images/home-icon-silhouette.svg" alt="home"><span>Welcome</span></a></li>
+                <li><a  href="#about"><img  src="images/user-solid.svg" alt="person icon"><span>About Me</span></a></li>
+                <li ><a href="#education"><img  src="images/graduation-cap-solid.svg" alt="education icon"><span>Education</span></a></li>
+                <li ><a  href="#work"><img src="images/briefcase-solid.svg"alt="briefcase icon" ><span>My Work</span></a></li>
+                <li ><a  href="#contact"><img  src="images/envelope-solid.svg" alt="email icon"><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <main>
+            <section id="welcome">
+                <div class="contents">
+                    <h1>Jade Xa</h1>
+                    <h3>DWDD 2610</h3>
+                </div>
+            </section>
+            <section id="about">
+                <h2>About Me</h2>
+                <p >I'm currently a college student at UVU majoring in Design.<br><br>My ethnicity is half Chinese & Vietnamese, I am also the oldest sibling in my family! (I have three sisters) </p>   
+                <img src="images/me1.webp" alt="me" width="200" height="200">
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <p>I'm currently a student at Utah Valley University in the Web Design and Development Program.<br></p>
+                <div class="cards" >
+                    <div class="card icon">
+                        <h4>High School</h4>
+                        <p><b>2015 - 2018</b> <br>Bingham High School, South Jordan, UT<br> </p>
+                        <ul>
+                            <li>3.8 Average GPA</li>
+                            <li>Honor Roll every year</li>
+                            <li>Transferred here from APA</li>
+                        </ul>
+                    </div> <!--end card-->
+                    <div class="card icon">
+                        <h4>College</h4>
+                        <p><b>Present</b> <br>Utah Valley University, Orem, UT</br></p>
+                        <ul>
+                            <li>Currently enrolled</li>
+                            <li>Majoring in Design</li>
+                            <li>Expected Graduation May 2025</li>
+                        </ul>
+                    </div> <!--end card-->
+                </div> <!--end .cards div-->
+
+            </section>
+            <section id="work">
+                <h2>My Work</h2>
+                <div class="cards" >
+                    <div class="card photo">
+                        <h4>Magic 8 Ball</h4>
+                        <p>Used Ruby to create a Magic8Ball program during my time at DevPoint</p>
+                        <img src="images/work1.webp" alt="work 1" width="200" height="200">
+                    </div> <!--end card-->
+                    <div class="card photo">
+                        <h4>Jade's Corner Deli</h4>
+                        <p>I am currently the social media manager for Jade's Corner Deli located in Taylorsville</p>
+                        <img src="images/work2.webp" alt="work 2" width="200" height="200">
+                    </div> <!--end card-->
+                    <div class="card photo">
+                        <h4>Hackathon</h4>
+                        <p>Presented a Hackathon project using Ruby, Javascript, HTML and CSS</p>
+                        <img src="images/work3.webp" alt="work 3"  width="200" height="200">
+                    </div> <!--end card-->
+                </div>
+            </section>
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <p>Use these apps to get in touch with me!</p>
+                <div class="social">
+                    <a href="#contact"><img src="images/twitter.svg" alt="icon" width="60" height="60"></a>
+                    <a href="#contact"><img src="images/facebook.svg" alt="icon" width="60" height="60"></a>
+                    <a href="#contact"><img src="images/linkedin.svg" alt="icon" width="60" height="60"></a>
+                    <a href="#contact"><img src="images/instagram.svg" alt="icon" width="60" height="60"></a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div>
+        <footer id="footerWrapper">
+            <p> &copy; <span id="year">x</span> Jade Xa </p>
+        </footer>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+// NAV STUFF
+
+body {
+    display: grid;
+    grid-template-columns: 250px auto;
+}
+
+#navWrapper {
+    grid-row: 1 / span 3;
+    position: relative;
+}
+
+nav ul {
+    width: 250px;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+
+    li {flex: none;}
+    position: fixed;
+}
+
+nav {
+    a {
+        width: 100%;
+    } // end a
+} // end nav
+
+
+// MAIN STUFF
+section {
+    padding: $gutter*3;
+}
+
+#work, #education {
+    height: 100vh;
+}
+
+#work, #education {
+    .cards {
+        .card {
+        flex-basis: calc(33.33% - (($gutter *2)/3));
+        }
+    }
+}
